@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nanodots</title>
+
+    <link rel="icon" type="image/png" href="./imgs/favicon.ico">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./_header.css">
+    <link rel="stylesheet" href="./_footer.css">
+
+    <link rel="stylesheet" href="./_navigation.css">
+    <script src="./_navigation.js" defer></script>
+
+    <script src="_intersecting.js" defer></script>
+
+    <script src="./_textarea.js" defer></script>
+    <script src="./_modal.js" defer></script>
+    <link rel="stylesheet" href="./_image-modal.css">
+    <script src="./_image-modal.js" defer></script>
+
+    <link rel="stylesheet" href="./_theme.css">
+    <link rel="stylesheet" href="./_theme-color-picker.css">
+    <script src="./_theme-modal-open.js" defer></script>
+    <script src="./_theme-themes.js" defer></script>
+    <script src="./_theme-colors.js" defer></script>
+    <script src="./_theme-toggle.js" defer></script>
+    <script src="./_theme-color-picker.js" defer></script>
+
+    <script src="./c-element.js" defer></script>
+</head>
+
+<body>
+
+    <nav id="nav-modal">
+        <a href="#article" class="link modal-link">modallink</a>
+        <a href="#blockquote" class="link modal-link">modallink</a>
+        <a href="#link" class="link modal-link">modallink</a>
+        <a href="#input" class="link modal-link">modallink</a>
+    </nav>
+
+    <div id="nav-header">
+
+        <a id="logo" href="./index.html"><img src="./imgs/logo.png" alt="the logo, a bright red, blurred circle"></a>
+
+        <nav id="nav-links">
+            <a href="#article" class="link">navlink</a>
+            <a href="#blockquote" class="link">navlink</a>
+            <a href="#link" class="link">navlink</a>
+            <a href="#input" class="link">navlink</a>
+        </nav>
+
+        <div id="nav-menu">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </div>
+
+    </div>
+
+
+    <header id="header">
+
+        <div>
+            <h1 id="function">nanodots</h1>
+            <p>re-fractured boilerplate</p>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <article>
+            <h2>elements</h2>
+            <p>text</p>
+            <p class="disabled-text">disabled text</p>
+            <a href="https://notanumber.ch" target="_blank" rel="noopener noreferrer">Link</a>
+            <p class="linefont">angi yoga</p>
+        </article>
+
+        <article id="form">
+
+            <h2>a login form</h2>
+            <form>
+                <div>
+                    <label for="username">Nutzername</label>
+                    <input type="text" name="username" id="username" autocomplete="on" autofocus>
+                </div>
+                <div>
+                    <label for="password">Passwort</label>
+                    <input type="password" name="password" id="password" autocomplete="on">
+                </div>
+                <button id="login-button">Anmelden</button>
+            </form>
+            <p id="login-feedback" class="form-feedback feedback"></p>
+
+        </article>
+
+        <article id="textarea">
+
+            <h2>a textarea</h2>
+            <form>
+                <label for="message">enter some text</label>
+                <textarea id="message" class="textarea" name="message" ></textarea>
+                <button id="send">submit form</button>
+            </form>
+            <p id="message-feedback" class="textarea-feedback feedback"></p>
+
+            <!-- .textarea + .textarea-feedback for js -->
+            <!-- .feedback for css -->
+
+        </article>
+
+        <article id="code">
+
+            <h2>some code</h2>
+            <pre class="code-block"><code>just some code block
+some more code that certainly or at least hopefully exceeds a single line, or else i just a some more text so it will for sure exceed a single line</code></pre>
+
+        </article>
+
+        <article id="modal">
+
+            <h2>a modal</h2>
+            <button id="open-modal-1">open modal</button>
+
+            <div id="modal-1" class="modal">
+
+                <div id="modal-1-inner" class="modal-inner">
+
+                    <div class="modal-header">
+
+                        <button class="modal-close link"><svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M256-213.847 213.847-256l224-224-224-224L256-746.153l224 224 224-224L746.153-704l-224 224 224 224L704-213.847l-224-224-224 224Z"/></svg></button>
+
+                    </div>
+
+                    <div class="modal-body">
+
+                        <h2>a modal</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto commodi odit voluptatum repudiandae sint iste laborum magni. Magnam quam sed ipsum, placeat quas ut alias quasi mollitia assumenda. Tenetur, eaque.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <article>
+
+            <h2>an image modal</h2>
+
+            <img id="image-modal-logo" class="image-modal-image" src="./imgs/dark-abstract-wallpaper-background-smoke-texture.jpg" alt="the logo, a red blurred circle">
+
+            <div id="image-modal">
+
+                <div id="image-modal-header" class="modal-header">
+                        
+                    <button class="link"><svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M256-213.847 213.847-256l224-224-224-224L256-746.153l224 224 224-224L746.153-704l-224 224 224 224L704-213.847l-224-224-224 224Z" /></svg></button>
+                    
+                </div>
+
+                <img id="image-modal-image" src="./imgs/logo.png">
+                
+            </div>
+        
+        </article>
+
+        <article id="spinner">
+
+            <h2>a spinner</h2>
+            <div class="spinner">
+                <div></div>
+            </div>
+
+        </article>
+
+        <article>
+
+            <h2>a theme modal</h2>
+
+            <button id="theme-modal-open">open theme modal</button>
+
+            <div id="theme-modal" class="modal">
+
+                <div id="theme-modal-inner" class="modal-inner">
+    
+                    <div id="theme-modal-header" class="modal-header">
+                        
+                        <button id="close-modal" class="modal-close link"><svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M256-213.847 213.847-256l224-224-224-224L256-746.153l224 224 224-224L746.153-704l-224 224 224 224L704-213.847l-224-224-224 224Z" /></svg></button>
+                        
+                    </div>
+    
+                    <div id="theme">
+    
+                        <h2>Farbschema</h2>
+                        
+                        <div class="theme-picker">
+    
+                            <div id="light">
+                                <p>hell</p>
+                            </div>
+                            
+                            <div>
+                                <input type="checkbox" class="toggle-input" id="theme-toggle">
+                                <label for="theme-toggle" class="toggle-label" id="theme-toggle-label"></label>
+                            </div>
+                            
+                            <div id="dark">
+                                <p>dunkel</p>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="color-picker">
+                            
+                            <label for="blue" class="blue">
+                                <input type="radio" name="color-picker" id="blue">
+                            </label>
+                            
+                            <label for="green" class="green">
+                                <input type="radio" name="color-picker" id="green">
+                            </label>
+                            
+                            <label for="red" class="red">
+                                <input type="radio" name="color-picker" id="red">
+                            </label>
+                            
+                        </div>
+    
+                        <div id="theme-save-meta">
+
+                            <p>Farbschema speichern</p>
+
+                            <input type="checkbox" class="toggle-input" id="theme-save-toggle">
+                            <label for="theme-save-toggle" class="toggle-label" id="theme-save-toggle-label"></label>
+
+                        </div>
+                        
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </article>
+
+        <!-- <article id="buttons">
+
+            <form>
+                <label for="blue-input">input</label>
+                <input class="v1-1" type="text" id="blue-input" name="blue-input">
+                <button>enabled</button>
+                <button class="disabled">disabled</button>
+            </form>
+
+        </article> -->
+
+        <article id="webcomponent">
+
+            <h2>a web component</h2>
+            <c-element title="a title" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quasi itaque recusandae obcaecati non unde rerum perferendis laboriosam distinctio neque! Impedit ad omnis aliquid asperiores ab quisquam, laudantium tempore iure!"></c-element>
+
+        </article>
+
+    </main>
+
+    <footer>
+
+        <a href="https://notanumber.ch" target="_blank">notanumber.ch</a>
+        <a href="./404.html">404.html</a>
+        <hr>
+        <button id="open-modal-2" class="link">Bildquelle</button>
+
+    </footer>
+
+    <div id="modal-2" class="modal">
+
+        <div id="modal-2-inner" class="modal-inner">
+
+            <div class="modal-header">
+
+                <button id="close-modal-2" class="modal-close link"><svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M256-213.847 213.847-256l224-224-224-224L256-746.153l224 224 224-224L746.153-704l-224 224 224 224L704-213.847l-224-224-224 224Z"/></svg></button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <h2>Bildquelle</h2>
+                <p><a href="https://www.freepik.com/free-photo/dark-abstract-wallpaper-background-smoke-texture_17580894.htm" target="_blank">Image by rawpixel.com on Freepik</a></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
